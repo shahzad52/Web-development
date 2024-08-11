@@ -4,3 +4,4 @@ Welcome to the Simple Web Development Course repository! This course is designed
 we will learn about following concepts 
 - html Form
 - buttons
+- images
