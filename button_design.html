@@ -1,8 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Colorful Buttons</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple example of colorful buttons with hover effects.">
+    <title>Colorful Buttons Example</title>
     <style>
+        :root {
+            --green: rgb(76, 175, 80);
+            --blue: rgb(33, 150, 243);
+            --red: rgb(244, 67, 54);
+            --yellow: rgb(255, 193, 7);
+        }
+
         .button {
             color: white;
             padding: 10px 20px;
@@ -13,29 +23,38 @@
             margin: 4px 2px;
             border: none;
             cursor: pointer;
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+            transition: opacity 0.3s ease, transform 0.2s ease;
         }
+
         .button1 {
-            background-color: rgb(76, 175, 80); /* Green */
+            background-color: var(--green); /* Green */
         }
+
         .button2 {
-            background-color: rgb(33, 150, 243); /* Blue */
+            background-color: var(--blue); /* Blue */
         }
+
         .button3 {
-            background-color: rgb(244, 67, 54); /* Red */
+            background-color: var(--red); /* Red */
         }
+
         .button4 {
-            background-color: rgb(255, 193, 7); /* Yellow */
+            background-color: var(--yellow); /* Yellow */
             color: black;
         }
+
         .button:hover {
             opacity: 0.8; /* Slightly fade on hover */
+            transform: translateY(-2px); /* Slight lift on hover */
         }
     </style>
 </head>
 <body>
-    <button class="button button1">Button 1</button>
-    <button class="button button2">Button 2</button>
-    <button class="button button3">Button 3</button>
-    <button class="button button4">Button 4</button>
+    <button class="button button1" aria-label="Green Button">Button 1</button>
+    <button class="button button2" aria-label="Blue Button">Button 2</button>
+    <button class="button button3" aria-label="Red Button">Button 3</button>
+    <button class="button button4" aria-label="Yellow Button">Button 4</button>
 </body>
 </html>
